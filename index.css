@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.productImg{
+    width: 100%;
+}
+.productImg2 {
+    display: none;
+}
+
+.card {
+    background-color: var(--white);
+}
+.pd-30 {
+    padding: 30px;
+}
+
+.text-component h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 17px;
+    color: var(--dark-grayish-blue);
+}
+
+.text-component h1 {
+    font-family: 'Fraunces', sans-serif;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.mainParagraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 35px;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 25px;
+}
+.newPrice p{
+    font-family: 'Fraunces', sans-serif;
+    font-size: 32px;
+    color: var(--dark-cyan);
+}
+.oldPrice p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.addToCartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .wrapper {
+        grid-template-columns: 100%;
+        margin: 1em;
+    }
+    .productImg{
+        display: none;
+    }
+    .productImg2 {
+        display: unset;
+        width: 100%;
+    }
+}
